@@ -5,7 +5,7 @@ namespace EmployeeWageProblemPart2
     class Program
     {
         const int IS_EMPLOYEE_FULL_TIME = 1;
-        const int IS_EMPLOYEE_PART_TIME = 1;
+        const int IS_EMPLOYEE_PART_TIME = 2;
         const int EMPLOYEE_RATE_PER_HOUR = 20;
 
         /// <summary>
@@ -15,7 +15,7 @@ namespace EmployeeWageProblemPart2
         static void Main(string[] args)
         {
             /// Computation
-            Console.WriteLine("Employee Daily Wage is :: "+EmployeeCheck());
+            Console.WriteLine("Employee Daily Wage is :: " + EmployeeCheck());
         }
         public static int EmployeeCheck()
         {
@@ -27,19 +27,20 @@ namespace EmployeeWageProblemPart2
             /// It Will Give Random Value
             int employeeCheck = random.Next(0, 3);
 
-            /// Checks If Employee is Present, It will give Employee Working Hours (ie, 8)
-            /// If Employee is Not Present, It will give zero 
-            if (employeeCheck == IS_EMPLOYEE_FULL_TIME)
+            /// By Using Switch Case
+            /// Checks If Employee is Full Time, It will give Full time Working hours
+            /// If Employee is Part Time, It will give Part time Working hours
+            switch(employeeCheck)
             {
-                empHrs = 8;
-            }
-            else if (employeeCheck == IS_EMPLOYEE_PART_TIME)
-            {
-                empHrs = 4;
-            }
-            else
-            {
-                empHrs = 0;
+                case IS_EMPLOYEE_FULL_TIME:
+                    empHrs = 8;
+                    break;
+                case IS_EMPLOYEE_PART_TIME:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
             }
 
             /// It will returns a Daily Wage
