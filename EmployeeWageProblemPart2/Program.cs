@@ -5,6 +5,7 @@ namespace EmployeeWageProblemPart2
     class Program
     {
         const int IS_EMPLOYEE_FULL_TIME = 1;
+        const int IS_EMPLOYEE_PART_TIME = 1;
         const int EMPLOYEE_RATE_PER_HOUR = 20;
 
         /// <summary>
@@ -24,13 +25,17 @@ namespace EmployeeWageProblemPart2
             /// Create References For Random Class
             Random random = new Random();
             /// It Will Give Random Value
-            int employeeCheck = random.Next(0, 2);
+            int employeeCheck = random.Next(0, 3);
 
             /// Checks If Employee is Present, It will give Employee Working Hours (ie, 8)
             /// If Employee is Not Present, It will give zero 
             if (employeeCheck == IS_EMPLOYEE_FULL_TIME)
             {
                 empHrs = 8;
+            }
+            else if (employeeCheck == IS_EMPLOYEE_PART_TIME)
+            {
+                empHrs = 4;
             }
             else
             {
