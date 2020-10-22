@@ -51,7 +51,5 @@ namespace EmployeeWageProblemPart2
             /// It will returns a Total Employee Wage
             return totalEmployeeWage;
         }
-            
-                    
     }
 }
