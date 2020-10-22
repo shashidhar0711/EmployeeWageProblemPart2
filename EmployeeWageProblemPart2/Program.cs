@@ -15,7 +15,7 @@ namespace EmployeeWageProblemPart2
         static void Main(string[] args)
         {
             /// Computation
-            Console.WriteLine("Employee Daily Wage is :: " + EmployeeCheck());
+            Console.WriteLine("Employee Daily Wage is :: "+EmployeeCheck());
         }
         public static int EmployeeCheck()
         {
