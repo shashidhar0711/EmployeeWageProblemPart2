@@ -1,4 +1,4 @@
-﻿using System;
+ using System;
 
 namespace EmployeeWageProblemPart2
 {
@@ -8,7 +8,7 @@ namespace EmployeeWageProblemPart2
         const int IS_EMPLOYEE_PART_TIME = 2;
         const int EMPLOYEE_RATE_PER_HOUR = 20;
         const int NUM_0F_WORKING_DAYS = 20;
-        const int MAX_HOURS_IN_MONTH =100;
+        const int MAX_HOURS_IN_MONTH = 100;
 
         /// <summary>
         /// Defines the entry point of the application.
@@ -16,10 +16,21 @@ namespace EmployeeWageProblemPart2
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            /// Computation
-            Console.WriteLine("Total Employee Wages :: " + EmployeeCheck());
+            ///Monthly Wage for multiple companies.
+            ///calls the Employee Check method with the following parameters.
+            Console.WriteLine("Employee Wage for Samsung is : " + EmployeeCheck("Samsung", 25, 24, 90));
+            Console.WriteLine("Employee Wage for Nokia is : " + EmployeeCheck("Nokia", 22, 22, 100));
         }
-        public static int EmployeeCheck()
+
+        /// <summary>
+        /// Employees the check.
+        /// </summary>
+        /// <param name="companyName">Name of the company.</param>
+        /// <param name="employeeRatePerHour">The employee rate per hour.</param>
+        /// <param name="numberOfWorkingDays">The number of working days.</param>
+        /// <param name="maxHoursInMonth">The maximum hours in month.</param>
+        /// <returns></returns>
+        public static int EmployeeCheck(String companyName, int employeeRatePerHour, int numberOfWorkingDays, int maxHoursInMonth)
         {
             /// variable
             int empHrs = 0;
