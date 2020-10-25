@@ -1,4 +1,4 @@
-﻿using System;
+ using System;
 
 namespace EmployeeWageProblemPart2
 {
@@ -17,7 +17,7 @@ namespace EmployeeWageProblemPart2
         static void Main(string[] args)
         {
             ///Monthly Wage for multiple companies.
-            ///calls the Computwage method with the following parameters.
+            ///calls the Employee Check method with the following parameters.
             Console.WriteLine("Employee Wage for Samsung is : " + EmployeeCheck("Samsung", 25, 24, 90));
             Console.WriteLine("Employee Wage for Nokia is : " + EmployeeCheck("Nokia", 22, 22, 100));
         }
